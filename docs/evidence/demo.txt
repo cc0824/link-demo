@@ -1,0 +1,51 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.example:short-link >-----------------------
+[INFO] Building Short Link Demo 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ short-link ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 9 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ short-link ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ short-link ---
+[INFO] skip non existing resourceDirectory D:\Code\IdeaProject\short-link\short-link\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ short-link ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ short-link ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.shortlink.demo.DemoSmoke
+�����õ�ǰ Demo ���� / Resetting current Demo data at http://localhost:8080/
+PASS 01 health, create and reuse
+PASS 02 server-rendered OG metadata and PNG
+PASS 03 visitor A redirect and manual product page
+PASS 04 two browser identities produce PV=2 UV=2
+PASS 05 HEAD and card requests leave counters unchanged
+PASS 06 cross-channel attribution preserves global UV
+PASS 07 missing and illegal keys have friendly 404 pages
+PASS 08 missing product metadata has title and image fallbacks
+PASS 09 off-shelf and deleted products retain safe cards without counting
+PASS 10 burst receives 429 with integer Retry-After
+PASS all 10 steps; preserved PV=3 UV=2 and deleted product1001; restart verification state: D:\Code\IdeaProject\short-link\short-link\target\demo-state.json
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 17.84 s -- in com.example.shortlink.demo.DemoSmoke
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.959 s
+[INFO] Finished at: 2026-11-17T20:42:49+08:00
+[INFO] ------------------------------------------------------------------------

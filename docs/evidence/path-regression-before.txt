@@ -1,0 +1,98 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.example:short-link >-----------------------
+[INFO] Building Short Link Demo 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ short-link ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 9 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ short-link ---
+[INFO] Recompiling the module because of added or removed source files.
+[INFO] Compiling 29 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ short-link ---
+[INFO] skip non existing resourceDirectory D:\Code\IdeaProject\short-link\short-link\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ short-link ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 12 source files with javac [debug parameters release 17] to target\test-classes
+[INFO] /D:/Code/IdeaProject/short-link/short-link/src/test/java/com/example/shortlink/link/LinkServiceTest.java: D:\Code\IdeaProject\short-link\short-link\src\test\java\com\example\shortlink\link\LinkServiceTest.javaʹ����δ�����򲻰�ȫ�Ĳ�����
+[INFO] /D:/Code/IdeaProject/short-link/short-link/src/test/java/com/example/shortlink/link/LinkServiceTest.java: �й���ϸ��Ϣ, ��ʹ�� -Xlint:unchecked ���±��롣
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ short-link ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.shortlink.acceptance.HttpPathSecurityTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2026-11-17T08:42:32.945+08:00  INFO 514144 --- [           main] c.e.s.acceptance.HttpPathSecurityTest    : Starting HttpPathSecurityTest using Java 17.0.12 with PID 514144 (started by cc in D:\Code\IdeaProject\short-link\short-link)
+2026-11-17T08:42:32.947+08:00  INFO 514144 --- [           main] c.e.s.acceptance.HttpPathSecurityTest    : The following 1 profile is active: "demo"
+2026-11-17T08:42:34.130+08:00  INFO 514144 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-17T08:42:34.147+08:00  INFO 514144 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-17T08:42:34.147+08:00  INFO 514144 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-11-17T08:42:34.206+08:00  INFO 514144 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-17T08:42:34.207+08:00  INFO 514144 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1245 ms
+2026-11-17T08:42:34.492+08:00  INFO 514144 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-17T08:42:34.664+08:00  INFO 514144 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:pathsecurity user=SA
+2026-11-17T08:42:34.665+08:00  INFO 514144 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-17T08:42:34.853+08:00  INFO 514144 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-11-17T08:42:35.314+08:00  INFO 514144 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-17T08:42:35.555+08:00  INFO 514144 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 13794 (http) with context path '/'
+2026-11-17T08:42:35.565+08:00  INFO 514144 --- [           main] c.e.s.acceptance.HttpPathSecurityTest    : Started HttpPathSecurityTest in 2.839 seconds (process running for 3.404)
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-17T08:42:36.135+08:00  INFO 514144 --- [1-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-17T08:42:36.135+08:00  INFO 514144 --- [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-17T08:42:36.136+08:00  INFO 514144 --- [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-17T08:42:36.275+08:00  INFO 514144 --- [1-auto-1-exec-1] c.example.shortlink.web.RequestIdFilter  : http_request requestId=96419464-8a01-49ea-95c8-b520e8e045d7 method=POST route=/api/links status=201 durationMs=128
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.806 s <<< FAILURE! -- in com.example.shortlink.acceptance.HttpPathSecurityTest
+[ERROR] com.example.shortlink.acceptance.HttpPathSecurityTest.nonCanonicalPathsCannotBypassApiAuthentication -- Time elapsed: 0.694 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+[/%61pi/links] 
+expected: 400
+ but was: 201
+	at com.example.shortlink.acceptance.HttpPathSecurityTest.nonCanonicalPathsCannotBypassApiAuthentication(HttpPathSecurityTest.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+
+[INFO] 
+[INFO] Results:
+[INFO] 
+[ERROR] Failures: 
+[ERROR]   HttpPathSecurityTest.nonCanonicalPathsCannotBypassApiAuthentication:28 [/%61pi/links] 
+expected: 400
+ but was: 201
+[INFO] 
+[ERROR] Tests run: 1, Failures: 1, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  8.211 s
+[INFO] Finished at: 2026-11-17T08:42:36+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.4:test (default-test) on project short-link: There are test failures.
+[ERROR] 
+[ERROR] See D:\Code\IdeaProject\short-link\short-link\target\surefire-reports for the individual test results.
+[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

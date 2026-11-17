@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title}">页面暂时无法打开 · 一物</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="page-shell">
+    <header class="site-header"><a class="brand" href="/" aria-label="一物分享首页"><span class="brand-mark" aria-hidden="true">一</span>一物<span class="brand-dot">·</span>分享</a><span class="header-note">好物，值得被看见</span></header>
+    <main class="message-page" id="main-content">
+        <div class="message-symbol" aria-hidden="true">↗</div>
+        <p class="eyebrow">A LITTLE PAUSE</p>
+        <p class="error-code" th:text="${status}">404</p>
+        <h1 th:text="${title}">页面暂时无法打开</h1>
+        <p class="message-copy" th:text="${message}">这条路径暂时没有到达目的地，试试从首页重新出发。</p>
+        <a class="button" href="/">返回首页 <span aria-hidden="true">↗</span></a>
+        <p class="request-id" th:if="${requestId != null}">请求编号 <span th:text="${requestId}"></span></p>
+    </main>
+    <footer class="site-footer"><span>一物 · 分享</span><span>让好物与日常相遇</span></footer>
+</div>
+</body>
+</html>

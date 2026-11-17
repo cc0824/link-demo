@@ -1,0 +1,8 @@
+target/
+data/
+.tools/
+.m2/
+.superpowers/
+.jqwik-database
+*.log
+.env

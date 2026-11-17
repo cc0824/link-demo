@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>演示工作台 · 一物分享</title>
+  <link rel="stylesheet" href="/workbench.css"><script src="/workbench.js" defer></script>
+</head>
+<body>
+<header class="masthead"><a class="brand" href="/">一物 <span>·</span> 分享</a><span>DEMO / 分享实验室</span><button id="credential-button" class="quiet">访问凭证</button></header>
+<main>
+  <section class="intro"><div><p class="eyebrow">FROM A PRODUCT TO A CONNECTION</p><h1>每一次分享，<br>都有迹可循。</h1></div><div class="intro-aside"><p>选一件好物，生成分享入口。<br>从卡片预览到访问统计，在这里走完一程。</p><nav aria-label="工作台导航"><a href="#products">01 商品</a><a href="#sharing">02 分享</a><a href="#statistics">03 统计</a></nav></div></section>
+  <p id="feedback" role="status" aria-live="polite">正在连接演示工作台…</p>
+  <noscript><p>请开启浏览器 JavaScript，以使用工作台的交互功能。</p></noscript>
+  <section id="products" class="section"><div class="section-heading"><div><p class="eyebrow">01 / THE COLLECTION</p><h2>从一件商品开始</h2></div><button id="refresh-products" class="quiet">刷新商品</button></div><p class="muted">1001 展示正常商品；1002 演示空标题与缺失图片的默认展示。删除后可单独恢复，保留分享记录。</p><div id="product-list" class="product-grid" aria-live="polite"></div></section>
+  <section id="sharing" class="section"><div class="section-heading"><div><p class="eyebrow">02 / PASS IT ON</p><h2>让好物被看见</h2></div><a href="/s/0" target="_blank" rel="noopener" class="quiet">打开失效链接示例 ↗</a></div>
+    <div class="share-layout"><form id="create-link-form" class="panel"><h3>生成分享链接</h3><label>选择商品<select name="productId" id="product-select" required><option value="">正在加载商品…</option></select></label><label>分享人<input name="sharerId" value="demo_user" required maxlength="64" pattern="[A-Za-z0-9_-]{1,64}" autocomplete="off"><small>英文、数字、下划线或连字符，最多 64 位</small></label><label>分享渠道<select name="channel"><option value="wechat">微信好友</option><option value="moments">朋友圈</option><option value="other">其他</option></select></label><button type="submit" class="primary">生成分享链接 ↗</button><p class="muted">同一商品、分享人和渠道会复用已有链接。</p></form><div id="link-result" class="result-panel" aria-live="polite"><p class="eyebrow">READY TO SHARE</p><h3>一条短链，<br>连接好物与朋友。</h3><p>生成后可以复制链接、预览卡片，或访问商品。</p><p class="muted">卡片预览不计入访问统计。点击「访问商品」后，到下方刷新统计。</p></div></div>
+    <div class="section-heading history-heading"><h3>最近的分享</h3><button id="refresh-links" class="quiet">刷新记录</button></div><p class="muted">展示最近 100 条记录，刷新或重新打开页面仍然保留。</p><div class="table-scroll"><table><caption class="sr-only">最近分享链接</caption><thead><tr><th>商品 / 短链</th><th>分享人 / 渠道</th><th>创建时间</th><th>操作</th></tr></thead><tbody id="link-history"></tbody></table></div>
+  </section>
+  <section id="statistics" class="section"><div class="section-heading"><div><p class="eyebrow">03 / THE RESPONSE</p><h2>看见分享的回响</h2></div><span class="muted">香港时间 · 最多 31 天</span></div><form id="stats-form" class="stats-filters"><label>开始日期<input type="date" name="from" required></label><label>结束日期（包含当天）<input type="date" name="to" required></label><label>渠道<select name="channel"><option value="">全部渠道</option><option value="wechat">微信好友</option><option value="moments">朋友圈</option><option value="other">其他</option></select></label><label>分享人<input name="sharerId" maxlength="64" pattern="[A-Za-z0-9_-]{1,64}" placeholder="全部分享人"></label><label>短链<select id="stats-key" name="key"><option value="">全部短链</option></select></label><label>分组方式<select name="groupBy"><option value="channel">按渠道</option><option value="sharerId">按分享人</option><option value="channel,sharerId">渠道 + 分享人</option><option value="">不分组</option></select></label><button class="primary" type="submit">查询 / 刷新统计</button></form>
+    <div class="metrics" aria-live="polite"><div><span>有效访问 · PV</span><strong id="pv">—</strong></div><div><span>独立访客 · UV</span><strong id="uv">—</strong></div><p id="stats-updated">尚未查询</p></div><p class="muted">仅记录有效短链跳转；同一访客、同一短链在同一 10 秒时间桶内最多计一次。UV 按所选时间范围内的签名访客 Cookie 去重；清除 Cookie 会被视为新访客。已识别爬虫和卡片预览不计入。</p><div class="table-scroll"><table><caption class="sr-only">访问统计分组</caption><thead><tr><th>渠道</th><th>分享人</th><th>PV</th><th>UV</th></tr></thead><tbody id="stats-groups"></tbody></table></div>
+  </section>
+  <details class="reset-area"><summary>重新开始演示</summary><p>恢复两件商品的初始状态，并永久清空全部短链与访问统计。只需恢复已删除商品时，请使用商品卡上的「恢复商品」。</p><button id="reset-button" class="danger">清空并重置演示</button></details>
+</main>
+<footer><span>一物 · 分享实验室</span><a href="/">返回商品首页 ↗</a></footer>
+<dialog id="credential-dialog"><form id="credential-form"><h2>连接工作台</h2><p>默认使用演示凭证。如果启动时设置了自定义凭证，请在此输入。凭证仅保留在当前页面内存。</p><label>访问凭证<input type="password" id="token-input" required maxlength="1000" autocomplete="off"></label><div class="actions"><button type="button" data-close-dialog="credential-dialog" class="quiet">取消</button><button type="submit" class="primary">连接</button></div></form></dialog>
+<dialog id="title-dialog"><form id="title-form"><h2>修改商品标题</h2><p>清空标题可演示默认标题展示。</p><label>标题<input id="title-input" maxlength="200"></label><div class="actions"><button type="button" data-close-dialog="title-dialog" class="quiet">取消</button><button type="submit" class="primary">保存标题</button></div></form></dialog>
+<dialog id="confirm-dialog"><form method="dialog"><h2 id="confirm-heading">确认操作</h2><p id="confirm-message"></p><div class="actions"><button value="cancel" class="quiet">取消</button><button value="confirm" class="danger">确认操作</button></div></form></dialog>
+</body></html>

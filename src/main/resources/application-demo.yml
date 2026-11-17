@@ -1,0 +1,3 @@
+app:
+  api-token: ${DEMO_API_TOKEN:demo-only-token}
+  visitor-secret: ${VISITOR_HMAC_SECRET:demo-only-change-this-visitor-secret-2026}

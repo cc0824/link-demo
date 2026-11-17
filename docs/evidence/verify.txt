@@ -1,0 +1,324 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.example:short-link >-----------------------
+[INFO] Building Short Link Demo 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- spotless:2.43.0:apply (default-cli) @ short-link ---
+[INFO] Writing clean file: D:\Code\IdeaProject\short-link\short-link\src\main\java\com\example\shortlink\page\MediaController.java
+[INFO] Writing clean file: D:\Code\IdeaProject\short-link\short-link\src\main\java\com\example\shortlink\product\JdbcProductGateway.java
+[INFO] Writing clean file: D:\Code\IdeaProject\short-link\short-link\src\test\java\com\example\shortlink\link\LinkRepositoryTest.java
+[INFO] Spotless.Java is keeping 42 files clean - 3 were changed to be clean, 1 were already clean, 38 were skipped because caching determined they were already clean
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ short-link ---
+[INFO] Copying 2 resources from src\main\resources to target\classes
+[INFO] Copying 9 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ short-link ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 29 source files with javac [debug parameters release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ short-link ---
+[INFO] skip non existing resourceDirectory D:\Code\IdeaProject\short-link\short-link\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ short-link ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 13 source files with javac [debug parameters release 17] to target\test-classes
+[INFO] /D:/Code/IdeaProject/short-link/short-link/src/test/java/com/example/shortlink/link/LinkServiceTest.java: D:\Code\IdeaProject\short-link\short-link\src\test\java\com\example\shortlink\link\LinkServiceTest.javaʹ����δ�����򲻰�ȫ�Ĳ�����
+[INFO] /D:/Code/IdeaProject/short-link/short-link/src/test/java/com/example/shortlink/link/LinkServiceTest.java: �й���ϸ��Ϣ, ��ʹ�� -Xlint:unchecked ���±��롣
+[INFO] 
+[INFO] --- surefire:3.5.4:test (default-test) @ short-link ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.example.shortlink.acceptance.FailureIsolationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2026-11-17T20:40:24.229+08:00  INFO 555332 --- [           main] c.e.s.acceptance.FailureIsolationTest    : Starting FailureIsolationTest using Java 17.0.12 with PID 555332 (started by cc in D:\Code\IdeaProject\short-link\short-link)
+2026-11-17T20:40:24.231+08:00  INFO 555332 --- [           main] c.e.s.acceptance.FailureIsolationTest    : The following 1 profile is active: "demo"
+2026-11-17T20:40:25.153+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-17T20:40:25.343+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:failure user=SA
+2026-11-17T20:40:25.345+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+Java HotSpot(TM) 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-11-17T20:40:26.469+08:00  INFO 555332 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-11-17T20:40:27.057+08:00  INFO 555332 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-17T20:40:27.057+08:00  INFO 555332 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-17T20:40:27.064+08:00  INFO 555332 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-17T20:40:27.075+08:00  INFO 555332 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 15 ms
+2026-11-17T20:40:27.156+08:00  INFO 555332 --- [           main] c.e.s.acceptance.FailureIsolationTest    : Started FailureIsolationTest in 3.166 seconds (process running for 4.025)
+2026-11-17T20:40:27.367+08:00 ERROR 555332 --- [           main] c.e.s.web.GlobalExceptionHandler         : database_failure requestId=801a86e7-e2eb-4920-b694-ed3fac90dd9e type=DataAccessResourceFailureException
+2026-11-17T20:40:27.537+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=801a86e7-e2eb-4920-b694-ed3fac90dd9e method=GET route=/s/{key} status=503 durationMs=188
+2026-11-17T20:40:27.625+08:00 ERROR 555332 --- [           main] c.e.s.web.GlobalExceptionHandler         : database_failure requestId=43008bd6-c1a2-4ff2-b257-68fc2b991af7 type=DataAccessResourceFailureException
+2026-11-17T20:40:27.626+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=43008bd6-c1a2-4ff2-b257-68fc2b991af7 method=GET route=/c/{key} status=503 durationMs=6
+2026-11-17T20:40:27.670+08:00 ERROR 555332 --- [           main] c.e.s.web.GlobalExceptionHandler         : database_failure requestId=66e64324-f3cd-41d8-8e65-60554cf9d859 type=DataAccessResourceFailureException
+2026-11-17T20:40:27.671+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=66e64324-f3cd-41d8-8e65-60554cf9d859 method=GET route=/s/{key} status=503 durationMs=3
+2026-11-17T20:40:27.675+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=97728208-dae9-4e63-8b57-9f031ea96495 method=GET route=/s/{key} status=404 durationMs=3
+2026-11-17T20:40:27.723+08:00  WARN 555332 --- [           main] c.example.shortlink.stats.StatsService   : stats_write_failed requestId=2dfc2ad6-890a-4ba8-8c44-785a95c2ba66 failureType=DataAccessResourceFailureException
+2026-11-17T20:40:27.723+08:00  INFO 555332 --- [           main] c.example.shortlink.page.PageController  : visit_record requestId=2dfc2ad6-890a-4ba8-8c44-785a95c2ba66 outcome=FAILED
+2026-11-17T20:40:27.757+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=2dfc2ad6-890a-4ba8-8c44-785a95c2ba66 method=GET route=/s/{key} status=302 durationMs=67
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.026 s -- in com.example.shortlink.acceptance.FailureIsolationTest
+[INFO] Running com.example.shortlink.acceptance.HttpGuardTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2026-11-17T20:40:27.807+08:00  INFO 555332 --- [           main] c.e.shortlink.acceptance.HttpGuardTest   : Starting HttpGuardTest using Java 17.0.12 with PID 555332 (started by cc in D:\Code\IdeaProject\short-link\short-link)
+2026-11-17T20:40:27.808+08:00  INFO 555332 --- [           main] c.e.shortlink.acceptance.HttpGuardTest   : No active profile set, falling back to 1 default profile: "default"
+2026-11-17T20:40:28.107+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-17T20:40:28.109+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn8: url=jdbc:h2:mem:guards user=SA
+2026-11-17T20:40:28.109+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-17T20:40:28.163+08:00  INFO 555332 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-11-17T20:40:28.235+08:00  INFO 555332 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-17T20:40:28.236+08:00  INFO 555332 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-17T20:40:28.237+08:00  INFO 555332 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-17T20:40:28.241+08:00  INFO 555332 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+2026-11-17T20:40:28.252+08:00  INFO 555332 --- [           main] c.e.shortlink.acceptance.HttpGuardTest   : Started HttpGuardTest in 0.473 seconds (process running for 5.123)
+2026-11-17T20:40:28.328+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=6499a547-52ed-4027-bf14-6152d4aec457 method=POST route=/** status=404 durationMs=66
+2026-11-17T20:40:28.343+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=ed771a23-4725-4d14-acc8-6ef3b64ca45a method=GET route=/s/{key} status=404 durationMs=12
+2026-11-17T20:40:28.350+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=5405e119-87d5-454a-8e43-5665e9e92d10 method=GET route=/s/{key} status=404 durationMs=2
+2026-11-17T20:40:28.354+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=427ee280-f3ba-4984-9cbb-6a0d39427bf2 method=GET route=/s/{key} status=404 durationMs=2
+2026-11-17T20:40:28.357+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=715ab8b7-fff2-4255-bdd9-6f54c11cda48 method=GET route=/s/{key} status=404 durationMs=2
+2026-11-17T20:40:28.360+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=7d40d76f-c327-4f3b-87f6-428c1b897003 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.363+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=e59955f1-f9ea-488d-808f-f27ec588d56e method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.365+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=7c0f26f5-5f0a-4432-aa23-27e99ae84ed1 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.368+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=ee1bb170-701b-4263-a755-5f2d132422aa method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.370+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=410ed548-c770-41e9-9451-4ccae66286b9 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.372+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=e3e43963-e82d-4216-8a86-9773b62f358d method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.375+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=73c8a8da-5b57-4d29-9bf7-18cafb4c57d5 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.379+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=f3a6156a-709e-4d97-b29d-4b60abe8f146 method=GET route=/s/{key} status=404 durationMs=2
+2026-11-17T20:40:28.382+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=9a585754-2988-4f94-82b0-b6e59968d3d9 method=GET route=/s/{key} status=404 durationMs=2
+2026-11-17T20:40:28.385+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=b0da3b6b-d2f9-440a-8b80-762498afdd7a method=GET route=/s/{key} status=404 durationMs=2
+2026-11-17T20:40:28.388+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=cb2fcefd-3bcc-43e3-9aee-a36366169651 method=GET route=/s/{key} status=404 durationMs=2
+2026-11-17T20:40:28.392+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=6dc4619c-ca79-4d87-9df1-19a4b64d9441 method=GET route=/s/{key} status=404 durationMs=2
+2026-11-17T20:40:28.395+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=000a3b3e-aae6-405e-95e8-07c6f1f9298f method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.398+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=f7ffe1ba-6ca0-4a30-9054-8d494dba2d2a method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.400+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=1bc6ff85-cc0e-4893-8731-6577154795b3 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.402+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=84f46245-19ec-424f-9599-5e4c2b93a7a9 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.405+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=a442517d-95a4-46f5-bc94-4ccea80b8277 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.408+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=c29f4ae8-51db-4382-865a-5930f1a1dd91 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.410+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=18c85719-f958-4e4b-8362-a4a7e1cc6386 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.412+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=75cc8f45-affe-4a4e-8f1d-b57973bc91aa method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.415+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=12ec2607-6a2f-4b2b-b9b0-45af7efdea48 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.417+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=5f3a2b26-d506-4b9b-ae14-47b6108bde59 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.419+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=862b9abc-fe22-449f-86b7-1e5b932dd150 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.422+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=e4f6aefa-c72d-4011-9694-e8ee499327be method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.425+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=acf9738d-36a2-4418-846f-f24c1194d7b5 method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:28.425+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=b0670066-3c70-452f-9c74-c1fc257f7eb9
+2026-11-17T20:40:28.426+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=b0670066-3c70-452f-9c74-c1fc257f7eb9 method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.429+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=65c4d9ca-b7a7-43f3-adfe-eeb99849a93e
+2026-11-17T20:40:28.429+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=65c4d9ca-b7a7-43f3-adfe-eeb99849a93e method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.430+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=907406ba-004b-4d4c-8304-d51ce7d53047
+2026-11-17T20:40:28.430+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=907406ba-004b-4d4c-8304-d51ce7d53047 method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.431+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=fb3b1b12-de2d-40bc-a8ca-06a822078698
+2026-11-17T20:40:28.431+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=fb3b1b12-de2d-40bc-a8ca-06a822078698 method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.432+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=76b6bcc2-f90b-481c-85af-d49352d4a845
+2026-11-17T20:40:28.432+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=76b6bcc2-f90b-481c-85af-d49352d4a845 method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.433+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=d69924ca-6bb2-407c-acc9-8ad05b55e144
+2026-11-17T20:40:28.433+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=d69924ca-6bb2-407c-acc9-8ad05b55e144 method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.433+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=50dff438-502e-42a8-bdb8-a26d5131ca5f
+2026-11-17T20:40:28.433+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=50dff438-502e-42a8-bdb8-a26d5131ca5f method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.435+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=1ef2dbc2-4c6d-440a-9e90-c4724789622a
+2026-11-17T20:40:28.435+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=1ef2dbc2-4c6d-440a-9e90-c4724789622a method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.435+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=0d79a321-4133-4f7a-9e6d-3d8db30c87ac
+2026-11-17T20:40:28.435+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=0d79a321-4133-4f7a-9e6d-3d8db30c87ac method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.436+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=a54c48bf-9ac4-4598-857e-188d9fcf58c2
+2026-11-17T20:40:28.436+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=a54c48bf-9ac4-4598-857e-188d9fcf58c2 method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.436+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=64aa3438-6095-45b2-8d68-735010a8617a
+2026-11-17T20:40:28.437+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=64aa3438-6095-45b2-8d68-735010a8617a method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.437+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=c7dafb56-24d0-4bc9-a89f-8b4256b66bc5
+2026-11-17T20:40:28.437+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=c7dafb56-24d0-4bc9-a89f-8b4256b66bc5 method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.438+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=418cb469-060c-41d0-8693-11c389e8c1c8
+2026-11-17T20:40:28.438+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=418cb469-060c-41d0-8693-11c389e8c1c8 method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.438+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=4b1234d7-89eb-4998-8908-0b0321c3f717
+2026-11-17T20:40:28.438+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=4b1234d7-89eb-4998-8908-0b0321c3f717 method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.439+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=3deb4f7b-2cb3-4524-8041-a9df85c90bcf
+2026-11-17T20:40:28.439+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=3deb4f7b-2cb3-4524-8041-a9df85c90bcf method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.439+08:00  WARN 555332 --- [           main] c.example.shortlink.web.ApiTokenFilter   : rate_limit_rejected requestId=357a4c74-b122-446c-8cbb-febfc3b951e8
+2026-11-17T20:40:28.439+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=357a4c74-b122-446c-8cbb-febfc3b951e8 method=GET route=unmatched status=429 durationMs=0
+2026-11-17T20:40:28.481+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=005c7e57-04c4-4dcf-9fde-f08067c0eff4 method=GET route=/actuator/health status=200 durationMs=41
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.714 s -- in com.example.shortlink.acceptance.HttpGuardTest
+[INFO] Running com.example.shortlink.acceptance.HttpPathSecurityTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2026-11-17T20:40:28.517+08:00  INFO 555332 --- [           main] c.e.s.acceptance.HttpPathSecurityTest    : Starting HttpPathSecurityTest using Java 17.0.12 with PID 555332 (started by cc in D:\Code\IdeaProject\short-link\short-link)
+2026-11-17T20:40:28.517+08:00  INFO 555332 --- [           main] c.e.s.acceptance.HttpPathSecurityTest    : The following 1 profile is active: "demo"
+2026-11-17T20:40:28.873+08:00  INFO 555332 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 0 (http)
+2026-11-17T20:40:28.883+08:00  INFO 555332 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-17T20:40:28.884+08:00  INFO 555332 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.48]
+2026-11-17T20:40:28.937+08:00  INFO 555332 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-11-17T20:40:28.938+08:00  INFO 555332 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 419 ms
+2026-11-17T20:40:29.032+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2026-11-17T20:40:29.034+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection conn16: url=jdbc:h2:mem:pathsecurity user=SA
+2026-11-17T20:40:29.034+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2026-11-17T20:40:29.063+08:00  INFO 555332 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-11-17T20:40:29.117+08:00  INFO 555332 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-17T20:40:29.288+08:00  INFO 555332 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 11054 (http) with context path '/'
+2026-11-17T20:40:29.291+08:00  INFO 555332 --- [           main] c.e.s.acceptance.HttpPathSecurityTest    : Started HttpPathSecurityTest in 0.797 seconds (process running for 6.161)
+2026-11-17T20:40:29.361+08:00  INFO 555332 --- [1-auto-1-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-17T20:40:29.361+08:00  INFO 555332 --- [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-17T20:40:29.362+08:00  INFO 555332 --- [1-auto-1-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-11-17T20:40:29.366+08:00  INFO 555332 --- [1-auto-1-exec-1] c.example.shortlink.web.RequestIdFilter  : http_request requestId=6d37f740-4076-416b-9558-f2a6749c8f00 method=POST route=unmatched status=400 durationMs=0
+2026-11-17T20:40:29.378+08:00  INFO 555332 --- [1-auto-1-exec-2] c.example.shortlink.web.RequestIdFilter  : http_request requestId=0829aa02-fad9-4e94-bff0-eb6c723d7302 method=POST route=unmatched status=400 durationMs=0
+2026-11-17T20:40:29.380+08:00  INFO 555332 --- [1-auto-1-exec-3] c.example.shortlink.web.RequestIdFilter  : http_request requestId=152d921d-e2ab-420a-b438-d6b12c8a00fe method=POST route=unmatched status=400 durationMs=0
+2026-11-17T20:40:29.382+08:00  INFO 555332 --- [1-auto-1-exec-4] c.example.shortlink.web.RequestIdFilter  : http_request requestId=9017bf51-7165-4a27-a6de-1ecc92f5b5db method=POST route=unmatched status=400 durationMs=0
+2026-11-17T20:40:29.385+08:00  INFO 555332 --- [1-auto-1-exec-9] c.example.shortlink.web.RequestIdFilter  : http_request requestId=97f5291d-5fca-482a-a560-020ec88ee1cc method=POST route=unmatched status=401 durationMs=1
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.899 s -- in com.example.shortlink.acceptance.HttpPathSecurityTest
+[INFO] Running com.example.shortlink.acceptance.ShareFlowTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.7)
+
+2026-11-17T20:40:29.416+08:00  INFO 555332 --- [           main] c.e.shortlink.acceptance.ShareFlowTest   : Starting ShareFlowTest using Java 17.0.12 with PID 555332 (started by cc in D:\Code\IdeaProject\short-link\short-link)
+2026-11-17T20:40:29.416+08:00  INFO 555332 --- [           main] c.e.shortlink.acceptance.ShareFlowTest   : The following 1 profile is active: "demo"
+2026-11-17T20:40:29.594+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2026-11-17T20:40:29.596+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection conn24: url=jdbc:h2:mem:acceptance user=SA
+2026-11-17T20:40:29.596+08:00  INFO 555332 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2026-11-17T20:40:29.634+08:00  INFO 555332 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2026-11-17T20:40:29.688+08:00  INFO 555332 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-17T20:40:29.688+08:00  INFO 555332 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-17T20:40:29.690+08:00  INFO 555332 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-11-17T20:40:29.693+08:00  INFO 555332 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+2026-11-17T20:40:29.708+08:00  INFO 555332 --- [           main] c.e.shortlink.acceptance.ShareFlowTest   : Started ShareFlowTest in 0.313 seconds (process running for 6.577)
+2026-11-17T20:40:29.722+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=7d808116-5268-40e8-9484-1009ebb43d4d method=POST route=/api/demo/reset status=204 durationMs=6
+2026-11-17T20:40:29.786+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=5e04da3e-8237-4132-985a-18f192dfd195 method=POST route=/api/links status=201 durationMs=62
+2026-11-17T20:40:29.807+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=3ac9b46f-a085-4056-b8ef-12e67e9f321c method=GET route=/c/{key} status=200 durationMs=18
+2026-11-17T20:40:29.812+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=03ae7f50-f71b-4b2e-937a-29ac1c548512 method=GET route=/media/products/{id}.png status=200 durationMs=2
+2026-11-17T20:40:29.822+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=e012bdd9-9782-49f5-8eab-4f319993cfb6 method=PATCH route=/api/demo/products/{id} status=200 durationMs=7
+2026-11-17T20:40:29.826+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=636de420-2fe7-4f6a-9d58-ceb6b9f73289 method=GET route=/c/{key} status=200 durationMs=1
+2026-11-17T20:40:29.879+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=ec11e166-dc8c-4a70-ad7f-786ceeec53c5 method=POST route=/api/demo/reset status=204 durationMs=5
+2026-11-17T20:40:29.882+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=785f2199-bb3d-4a46-ab74-4e838f1ca607 method=POST route=/api/links status=201 durationMs=2
+2026-11-17T20:40:29.885+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=46988734-6400-4f45-92d2-43e799a478ce method=GET route=/s/{key} status=302 durationMs=1
+2026-11-17T20:40:29.890+08:00  INFO 555332 --- [           main] c.example.shortlink.page.PageController  : visit_record requestId=aae0f7db-aa11-441f-b499-de6869de967c outcome=RECORDED
+2026-11-17T20:40:29.890+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=aae0f7db-aa11-441f-b499-de6869de967c method=GET route=/s/{key} status=302 durationMs=2
+2026-11-17T20:40:29.896+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=ea1a47c2-93f4-4c9e-a915-3507fa0470d9 method=POST route=/api/demo/reset status=204 durationMs=2
+2026-11-17T20:40:29.899+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=1e4d8b3f-edfd-46f9-add7-24bc278ceb1b method=POST route=/api/links status=201 durationMs=2
+2026-11-17T20:40:29.901+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=af2bccfe-97a7-48ea-8e99-513c83a7a36b method=GET route=/c/{key} status=200 durationMs=1
+2026-11-17T20:40:29.903+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=dc43d07a-06fb-490e-8c34-5de715032c16 method=PATCH route=/api/demo/products/{id} status=200 durationMs=1
+2026-11-17T20:40:29.915+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=300a8f9e-6f49-4101-b973-9e3969c671ae method=GET route=/s/{key} status=410 durationMs=11
+2026-11-17T20:40:29.918+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=61a09688-a84a-412b-82a5-5639e96c90b2 method=GET route=/c/{key} status=200 durationMs=1
+2026-11-17T20:40:29.919+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=c9d42527-4f9e-4e04-87b7-538ae348036c method=DELETE route=/api/demo/products/{id} status=204 durationMs=0
+2026-11-17T20:40:29.921+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=2b2571ef-bc99-40c2-9302-52ee48db43c2 method=GET route=/s/{key} status=410 durationMs=1
+2026-11-17T20:40:29.922+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=64304fe7-9805-4a45-9040-e19bac23fa49 method=GET route=/c/{key} status=200 durationMs=1
+2026-11-17T20:40:29.928+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=5eaa6b75-64b2-462e-9043-7666a653e719 method=POST route=/api/demo/reset status=204 durationMs=1
+2026-11-17T20:40:29.931+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=9ddda818-1793-4a17-9d75-4a99dd288c0a method=POST route=unmatched status=401 durationMs=1
+2026-11-17T20:40:29.959+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=5466cb2b-82a0-4ffe-a5b1-53ff7af3a744 method=GET route=unmatched status=401 durationMs=0
+2026-11-17T20:40:29.963+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=b9a0d5b8-4ee1-4936-9bb9-8b4d9be3aff0 method=POST route=/api/links status=400 durationMs=2
+2026-11-17T20:40:29.963+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=a747a567-dd46-4107-b160-a7250c9c7948 method=POST route=unmatched status=413 durationMs=0
+2026-11-17T20:40:29.966+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=805009d8-74e2-4919-9990-5433a896a22b method=GET route=/s/{key} status=404 durationMs=2
+2026-11-17T20:40:29.967+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=8f4cef44-44bf-4f49-97c5-44480bf74afc method=GET route=/s/{key} status=404 durationMs=0
+2026-11-17T20:40:29.969+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=c1301b93-fac0-499a-9964-92906fd923f9 method=GET route=/s/{key} status=404 durationMs=0
+2026-11-17T20:40:29.971+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=3e97114e-ab44-40dc-af9a-d3f5635fbbbf method=GET route=/s/{key} status=404 durationMs=1
+2026-11-17T20:40:29.977+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=36a51f5f-0733-4b55-88c4-6b48b7cf8a1b method=POST route=/api/demo/reset status=204 durationMs=2
+2026-11-17T20:40:29.979+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=968ee3be-8a3e-42ef-b141-2e53622387a2 method=POST route=/api/links status=400 durationMs=1
+2026-11-17T20:40:29.980+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=7ad4ca1b-eb4a-4f1f-9a65-c642afc0a99a method=POST route=/api/links status=400 durationMs=0
+2026-11-17T20:40:29.983+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=4b030476-c18b-4265-8f5c-3a0f12846c79 method=GET route=unmatched status=405 durationMs=1
+2026-11-17T20:40:29.984+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=9cc6b410-6cdc-46dc-8447-b156f3cabd8c method=POST route=/api/links status=415 durationMs=0
+2026-11-17T20:40:29.989+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=c6bf1197-071c-4ed3-8f3a-c2811742030d method=POST route=/api/demo/reset status=204 durationMs=1
+2026-11-17T20:40:29.992+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=3df0b518-3c46-4132-bf97-dd564d2fee5a method=POST route=/api/links status=201 durationMs=2
+2026-11-17T20:40:29.994+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=edaf9055-bd69-453e-b9b3-ebc22b53f667 method=POST route=/api/links status=200 durationMs=1
+2026-11-17T20:40:29.996+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=6da8a761-6a68-42fc-9818-e03a72ea1256 method=GET route=/c/{key} status=200 durationMs=1
+2026-11-17T20:40:29.998+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=d5ce97eb-1be1-4c84-ad8a-b2e5d37d03e9 method=HEAD route=/s/{key} status=302 durationMs=0
+2026-11-17T20:40:30.000+08:00  INFO 555332 --- [           main] c.example.shortlink.page.PageController  : visit_record requestId=fb566249-b104-4d29-b4b2-5e67bf16d766 outcome=RECORDED
+2026-11-17T20:40:30.001+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=fb566249-b104-4d29-b4b2-5e67bf16d766 method=GET route=/s/{key} status=302 durationMs=1
+2026-11-17T20:40:30.011+08:00  INFO 555332 --- [           main] c.example.shortlink.web.RequestIdFilter  : http_request requestId=2927c238-d15b-40b3-ae2e-72bad02ab30d method=GET route=/products/{id} status=200 durationMs=9
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.624 s -- in com.example.shortlink.acceptance.ShareFlowTest
+[INFO] Running com.example.shortlink.codec.Base62CodecTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.example.shortlink.codec.Base62CodecTest
+[INFO] Running com.example.shortlink.link.LinkRepositoryTest
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.065 s -- in com.example.shortlink.link.LinkRepositoryTest
+[INFO] Running com.example.shortlink.link.LinkServiceTest
+2026-11-17T20:40:30.098+08:00  WARN 555332 --- [           main] com.example.shortlink.link.LinkService   : short_link_key_collision attempt=1
+2026-11-17T20:40:30.098+08:00  WARN 555332 --- [           main] com.example.shortlink.link.LinkService   : short_link_key_collision attempt=2
+2026-11-17T20:40:30.099+08:00  WARN 555332 --- [           main] com.example.shortlink.link.LinkService   : short_link_key_collision attempt=3
+2026-11-17T20:40:30.109+08:00  WARN 555332 --- [           main] com.example.shortlink.link.LinkService   : short_link_key_collision attempt=1
+2026-11-17T20:40:30.109+08:00  WARN 555332 --- [           main] com.example.shortlink.link.LinkService   : short_link_key_collision attempt=2
+[INFO] Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.029 s -- in com.example.shortlink.link.LinkServiceTest
+[INFO] Running com.example.shortlink.stats.StatsPolicyTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in com.example.shortlink.stats.StatsPolicyTest
+[INFO] Running com.example.shortlink.stats.StatsRepositoryTest
+2026-11-17T20:40:30.143+08:00  WARN 555332 --- [           main] c.example.shortlink.stats.StatsService   : stats_write_failed requestId=request-stats-failure failureType=DataAccessResourceFailureException
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.240 s -- in com.example.shortlink.stats.StatsRepositoryTest
+[INFO] Running com.example.shortlink.stats.VisitorIdentityTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in com.example.shortlink.stats.VisitorIdentityTest
+[INFO] Running com.example.shortlink.web.AbuseGuardTest
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in com.example.shortlink.web.AbuseGuardTest
+[INFO] Running com.example.shortlink.codec.Base62Properties
+timestamp = 2026-11-17T20:40:30.627642800, Base62Properties:roundTrip = 
+                              |-----------------------jqwik-----------------------
+tries = 10000                 | # of calls to property
+checks = 10000                | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 4          | # of all combined edge cases
+edge-cases#tried = 4          | # of edge cases tried in current run
+seed = 20261113               | random seed to reproduce generated values
+
+
+timestamp = 2026-11-17T20:40:30.728348500, Base62Properties:independentlyGeneratedAcceptedKeysAreCanonical = 
+                              |-----------------------jqwik-----------------------
+tries = 10000                 | # of calls to property
+checks = 10000                | # of not rejected calls
+generation = RANDOMIZED       | parameters are randomly generated
+after-failure = SAMPLE_FIRST  | try previously failed sample, then previous seed
+when-fixed-seed = ALLOW       | fixing the random seed is allowed
+edge-cases#mode = MIXIN       | edge cases are mixed in
+edge-cases#total = 3          | # of all combined edge cases
+edge-cases#tried = 3          | # of edge cases tried in current run
+seed = 20261114               | random seed to reproduce generated values
+
+
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.315 s -- in com.example.shortlink.codec.Base62Properties
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 44, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.4.2:jar (default-jar) @ short-link ---
+[INFO] Building jar: D:\Code\IdeaProject\short-link\short-link\target\short-link-demo.jar
+[INFO] 
+[INFO] --- spring-boot:3.5.7:repackage (repackage) @ short-link ---
+[INFO] Replacing main artifact D:\Code\IdeaProject\short-link\short-link\target\short-link-demo.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to D:\Code\IdeaProject\short-link\short-link\target\short-link-demo.jar.original
+[INFO] 
+[INFO] --- spotless:2.43.0:check (default) @ short-link ---
+[INFO] Spotless.Java is keeping 42 files clean - 0 needs changes to be clean, 0 were already clean, 42 were skipped because caching determined they were already clean
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  19.098 s
+[INFO] Finished at: 2026-11-17T20:40:32+08:00
+[INFO] ------------------------------------------------------------------------

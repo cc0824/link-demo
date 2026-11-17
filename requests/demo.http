@@ -1,0 +1,139 @@
+### Run DemoSmoke first to execute all assertions and save actual keys in target/demo-state.json.
+### Full demo resets data; verifyOnly reads saved state and checks persistence without resetting.
+### PowerShell: .\mvnw.cmd -B "-Dtest=DemoSmoke" "-Ddemo.baseUrl=http://localhost:8080" test
+### Restart check: add "-Ddemo.verifyOnly=true" to the same command after restarting from this project.
+### The HTTP client captures the first response key; never replace it with an example key.
+@baseUrl = http://localhost:8080
+@token = demo-only-token
+
+### Health
+< {%
+  // Business dates are generated at run time in Asia/Hong_Kong (UTC+8).
+  const hongKongNow = Date.now() + 8 * 60 * 60 * 1000;
+  client.global.set("from", new Date(hongKongNow).toISOString().slice(0, 10));
+  client.global.set("to", new Date(hongKongNow + 24 * 60 * 60 * 1000).toISOString().slice(0, 10));
+%}
+GET {{baseUrl}}/actuator/health
+
+### This explicitly resets current demo data. Run only when ready for a new demonstration.
+POST {{baseUrl}}/api/demo/reset
+Authorization: Bearer {{token}}
+
+### Create first link; supported by JetBrains HTTP Client.
+POST {{baseUrl}}/api/links
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{"productId":1001,"sharerId":"user_001","channel":"wechat"}
+
+> {%
+  client.global.set("key", response.body.key);
+  client.test("Created", function () { client.assert(response.status === 201); });
+%}
+
+### Same tuple reuses the actual saved key.
+POST {{baseUrl}}/api/links
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{"productId":1001,"sharerId":"user_001","channel":"wechat"}
+
+### Card and image do not count PV.
+GET {{baseUrl}}/c/{{key}}
+
+### Valid PNG
+GET {{baseUrl}}/media/products/1001.png
+
+### HEAD does not issue a visitor Cookie or count PV.
+HEAD {{baseUrl}}/s/{{key}}
+
+### Disable automatic redirects in your HTTP client; the server must return 302 + no-store.
+# @no-redirect
+GET {{baseUrl}}/s/{{key}}?channel=other&sharerId=mallory
+User-Agent: Mozilla/5.0 MicroMessenger/8.0
+
+### Follow Location manually; attribution comes from stored data.
+GET {{baseUrl}}/products/1001?channel=wechat&sharerId=user_001
+
+### Global distinct UV; update dates above. DemoSmoke derives both automatically in Asia/Hong_Kong.
+GET {{baseUrl}}/api/stats?from={{from}}&to={{to}}&groupBy=channel,sharerId
+Authorization: Bearer {{token}}
+
+### Visitor B sends no existing browser Cookie; the saved cookie jar remains visitor A.
+# @no-cookie-jar
+# @no-redirect
+GET {{baseUrl}}/s/{{key}}
+User-Agent: Mozilla/5.0 MicroMessenger/8.0
+
+### Create another channel, then use the same browser Cookie for its click.
+POST {{baseUrl}}/api/links
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{"productId":1001,"sharerId":"bob","channel":"moments"}
+
+> {% client.global.set("secondKey", response.body.key); %}
+
+### Same visitor across channels remains one global UV.
+# @no-redirect
+GET {{baseUrl}}/s/{{secondKey}}
+
+### Legal but absent key (if it happens to match a generated key, choose another legal Base62 value).
+GET {{baseUrl}}/s/1
+
+### Invalid canonical key -> friendly404.
+GET {{baseUrl}}/s/000
+
+### Empty title; seeded product1002 already has a missing image reference.
+PATCH {{baseUrl}}/api/demo/products/1002
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{"title":""}
+
+### Create fallback card.
+POST {{baseUrl}}/api/links
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{"productId":1002,"sharerId":"fallback","channel":"other"}
+
+> {% client.global.set("fallbackKey", response.body.key); %}
+
+### Server outputs 精选商品 and a usable og:image.
+GET {{baseUrl}}/c/{{fallbackKey}}
+
+### Missing product image returns the built-in default PNG with200.
+GET {{baseUrl}}/media/products/1002.png
+
+### Off-shelf preserves old short links and card metadata.
+PATCH {{baseUrl}}/api/demo/products/1001
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{"status":"OFF_SHELF"}
+
+###410 and no additional PV.
+# @no-redirect
+GET {{baseUrl}}/s/{{key}}
+
+###200 with 商品暂不可购买.
+GET {{baseUrl}}/c/{{key}}
+
+### Deleted product still has a friendly old card.
+DELETE {{baseUrl}}/api/demo/products/1001
+Authorization: Bearer {{token}}
+
+###410 remains after delete and after restart.
+# @no-redirect
+GET {{baseUrl}}/s/{{key}}
+
+###200 with 商品已不可用.
+GET {{baseUrl}}/c/{{key}}
+
+### After restarting: query without reset; use saved dates and keys from target/demo-state.json.
+GET {{baseUrl}}/api/stats?from={{from}}&to={{to}}&groupBy=channel,sharerId
+Authorization: Bearer {{token}}
+
+### Repeat rapidly to observe429 + integer Retry-After; DemoSmoke performs the bounded burst itself.
+GET {{baseUrl}}/c/1

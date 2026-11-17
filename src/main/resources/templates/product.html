@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title th:text="${title}">商品详情 · 一物</title>
+    <meta name="description" th:content="${description}" content="一件好物，一份日常。">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="page-shell">
+    <header class="site-header"><a class="brand" href="/" aria-label="一物分享首页"><span class="brand-mark" aria-hidden="true">一</span>一物<span class="brand-dot">·</span>分享</a><span class="header-note">日常选物</span></header>
+    <main id="main-content">
+        <nav class="breadcrumb" aria-label="面包屑"><a href="/">首页</a><span aria-hidden="true">/</span><span>商品详情</span></nav>
+        <article class="detail-layout product-layout">
+            <div class="detail-image"><img th:src="${imageUrl}" src="/images/default-product.png" th:alt="${title}" alt="商品示意插画" width="1200" height="630"><span class="image-caption">一物选物 · 原创示意插画</span></div>
+            <div class="detail-copy">
+                <p class="eyebrow">MADE FOR THE EVERYDAY</p>
+                <h1 th:text="${title}">日常好物</h1>
+                <p class="product-description" th:text="${description}">一件好物，一份日常。</p>
+                <div class="product-note"><span class="note-asterisk" aria-hidden="true">✳</span><p>日常里的小小选择，<br>也可以成为值得分享的美好。</p></div>
+                <dl class="product-meta"><div><dt>商品编号</dt><dd th:text="${productId}">1001</dd></div><div><dt>页面状态</dt><dd><span class="demo-label">演示商品</span></dd></div></dl>
+                <a class="text-link" href="/">回到首页 <span aria-hidden="true">↗</span></a>
+            </div>
+        </article>
+        <aside class="demo-notice"><span class="demo-label">关于此页</span><p>此页面用于展示商品分享流程，图片为原创示意插画。</p></aside>
+    </main>
+    <footer class="site-footer"><span>一物 · 分享</span><span>让好物与日常相遇</span></footer>
+</div>
+</body>
+</html>
