@@ -171,6 +171,7 @@ UV 在查询范围内 `COUNT(DISTINCT visitor_hash)`，**不能累加各渠道�
 
 ## 工程记录
 
+- [逐项需求核对与交付边界](docs/REQUIREMENTS_AUDIT.md)
 - [原始方案与实施映射](DEMO_IMPLEMENTATION_PLAN.md)
 - [实现决策与 AI 建议处理](docs/decisions.md)
 - [独立审查与修复结论](docs/review.md)
